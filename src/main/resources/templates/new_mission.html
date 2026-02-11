@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Mission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Create New Mission</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Form bắt đầu ở đây -->
+                    <!-- action: gửi dữ liệu đến hàm /saveMission trong Controller -->
+                    <!-- object: liên kết với biến 'mission' rỗng chúng ta tạo ở Controller -->
+                    <form action="#" th:action="@{/saveMission}" th:object="${mission}" method="POST">
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Mission Name</label>
+                            <input type="text" th:field="*{name}" class="form-control" placeholder="Enter mission name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Mission Code</label>
+                            <input type="text" th:field="*{code}" class="form-control" placeholder="e.g., AP11" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Destination Planet</label>
+                            <input type="text" th:field="*{des}" class="form-control" placeholder="e.g., Mars" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Launch Year</label>
+                                <input type="number" th:field="*{launchYear}" class="form-control" min="1900" max="2200" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Success Rate (%)</label>
+                                <input type="number" step="0.1" th:field="*{successRate}" class="form-control" min="0" max="100" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" th:field="*{isManned}" class="form-check-input" id="mannedCheck">
+                            <label class="form-check-label" for="mannedCheck">Is Manned Mission?</label>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Save Mission</button>
+                            <a href="/" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
