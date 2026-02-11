@@ -15,12 +15,9 @@
                     <h3 class="card-title mb-0">Edit Astronaut for Mission: <span th:text="${mission.name}"></span></h3>
                 </div>
                 <div class="card-body">
-                    <!-- Form này gửi đến hàm saveAstronaut (cùng hàm với thêm mới) -->
                     <form action="#" th:action="@{/saveAstronaut}" th:object="${astronaut}" method="POST">
                         
-                        <!-- QUAN TRỌNG: Truyền ngầm ID của Astronaut để Controller biết đây là Update -->
                         <input type="hidden" th:field="*{id}">
-                        <!-- Truyền ngầm Mission để giữ liên kết -->
                         <input type="hidden" th:field="*{mission}">
 
                         <div class="mb-3">
