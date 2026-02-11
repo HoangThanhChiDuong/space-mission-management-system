@@ -23,8 +23,6 @@ While the original assignment built a strong foundation in algorithmic thinking,
 | **Data Storage** | Text/CSV Files | MySQL Database |
 | **Data Structures** | Fixed-size Arrays | Dynamic Collections (`List`, `JPA Repository`) |
 
----
-
 ## ✨ Key Features
 
 1.  **Mission Management (CRUD):**
@@ -46,14 +44,13 @@ While the original assignment built a strong foundation in algorithmic thinking,
 *   **Database:** MySQL.
 *   **Tools:** Maven, Git/GitHub, Visual Studio Code.
 
----
-
 ## 📸 Screenshots
 
 <img width="1326" height="550" alt="image" src="https://github.com/user-attachments/assets/f4f912be-6ee5-4892-9702-f0ead90a89c2" />
 
+<img width="655" height="572" alt="image" src="https://github.com/user-attachments/assets/6d374856-5554-4e63-b05b-3cf3896d35a9" /> 
 
----
+<img width="650" height="438" alt="image" src="https://github.com/user-attachments/assets/663d5c7b-6520-43bd-9aeb-5875d0cfb7d4" />
 
 ## ⚙️ Installation & Setup
 
